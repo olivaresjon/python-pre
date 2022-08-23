@@ -1,11 +1,11 @@
 # Q1) Write a function to print "hello_USERNAME!" USERNAME is the input of the function.
 def hello_name(user_name):
-    print('hello_USERNAME!')
-hello_name('user_name')
+    print(f"hello_{user_name.upper()}!")
+hello_name(input("Select username: "))
 
 # Q2) Write a python function, first_odds that prints the odd numbers from 1-100 and returns nothing
 def first_odds():
-    for numbers in range(1,100):
+    for numbers in range(1,101):
         if numbers % 2 != 0:
             print(numbers)
     return
@@ -31,5 +31,8 @@ year = int(2022)
 print(is_leap_year(year))
 
 # question 5 Write a function to check to see if all numbers in list are consecutive numbers. For example, [2,3,4,5,6,7] are consecutive numbers, but [1,2,4,5] are not consecutive numbers. The return should be boolean Type.
-# I need help to solve this problem (tried google)
+def is_consecutive(a_list):
+    return print(sorted(a_list) == list(range(min(a_list), max(a_list) + 1)))
 
+group_numbers = [1,2.3,4,5,6,7,8,9] 
+is_consecutive(group_numbers)
